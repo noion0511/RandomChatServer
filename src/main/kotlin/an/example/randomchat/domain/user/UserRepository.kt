@@ -6,7 +6,7 @@ import an.example.randomchat.common.RandomChatException
 
 @Repository
 class UserRepository {
-    private val users = mutableListOf<User>()
+    private val users = mutableListOf<User>(User.create("admin"))
 
     private val indexById = ConcurrentHashMap<Long, User>()
     private val indexByNickName = ConcurrentHashMap<String, User>()

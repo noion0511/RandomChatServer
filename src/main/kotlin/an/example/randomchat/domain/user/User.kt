@@ -5,6 +5,7 @@ import java.util.concurrent.atomic.AtomicLong
 //1. User 객체를 직접 생성하지 못하도록 private 접근자로 생성
 //2. User 객체를 생성하는 함수는 User 클래스 내부에 정적 함수로 정의, thread-safe AtomicLong의 nextUserId를 사용
 //-> 객체마다 서버 전역에서 유일한 ID값을 할당
+//사용자 정보를 메모리에서만 관리하고 데이터베이스에 넣지않음
 
 class User private constructor(val id: Long, val nickName: String)
 {
